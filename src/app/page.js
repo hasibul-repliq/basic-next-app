@@ -17,7 +17,7 @@ export default function Home() {
   if (!isLoading && error) content = <main className="p-12"><p className="text-center text-red-600 text-base font-bold">Can't fetch data, something went wrong!</p></main>
   if (!isLoading && !error && !data.length) content = <main className="p-12"><p className="text-center text-base font-bold">No available products</p></main>
   if (!isLoading && !error && data.length) content =
-    <main className="grid gap-y-3 lg:gap-y-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 min-h-screen p-12">
+    <main className="grid gap-3 lg:gap-y-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 min-h-screen py-10 px-4">
       {
         data.map((productData) => <Card key={productData?.id} data={productData} />)
       }

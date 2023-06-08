@@ -9,7 +9,7 @@ export default function PageLayout({ children }) {
 
     return (
         <>
-            <nav className="sticky top-0 bg-white p-3 md:p-5 flex justify-between items-center">
+            <nav className="sticky top-0 bg-white p-3 md:p-5 flex justify-between items-center shadow-sm">
                 <div><Link href="/">
                     <img className='h-10 w-auto' src='/images/repliq2x-logo.png' alt='brand_logo' />
                 </Link></div>

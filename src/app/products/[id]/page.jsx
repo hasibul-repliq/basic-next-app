@@ -52,7 +52,9 @@ export default function ProductDetails({ params }) {
     if (!isLoading && error) content = <p className="text-center text-red-600 text-base font-bold">Can't fetch data, something went wrong!</p>
     if (!isLoading && !error && data) content =
         <>
-            <img className="w-3/4 md:w-2/5 lg:w-1/4" src={image} alt="product_image" />
+            <div className="w-3/4 md:w-2/5 lg:w-2/5 p-10 border border-neutral-100 rounded-md shadow-md">
+                <img className=" h-auto w-auto" src={image} alt="product_image" />
+            </div>
             <div className="w-3/4 md:w-2/5 lg:w-1/4" >
                 <p className="text-sm text-neutral-500 font-bold">{category}</p>
                 <h4 className="text-xl text-neutral-800 font-semibold">{title}</h4>
@@ -60,7 +62,7 @@ export default function ProductDetails({ params }) {
 
                 <div className="flex flex-col-reverse gap-y-1 md:flex-row justify-between md:items-center pt-5">
                     <p className='font-bold text-xl text-cyan-800'>${price}</p>
-                    <div className="flex items-center">
+                    <div className="flex items-center gap-x-1">
                         <div className="flex justify-center items-center text-amber-500">
                             <MdOutlineStar /> {rating?.rate}
                         </div> |
@@ -78,7 +80,7 @@ export default function ProductDetails({ params }) {
 
     return (
         <PageLayout>
-            <main className="flex flex-col md:flex-row gap-5 md:gap-x-10 lg:gap-x-20 justify-center items-center p-12">
+            <main className="flex flex-col md:flex-row gap-5 md:gap-x-10 lg:gap-x-20 justify-center items-center px-4 py-10">
                 {content}
             </main>
         </PageLayout>

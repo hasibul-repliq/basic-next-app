@@ -1,5 +1,4 @@
 import { MdOutlineStar } from 'react-icons/md';
-import { FaShoppingCart } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 
 export default function Card({ data }) {
@@ -8,8 +7,8 @@ export default function Card({ data }) {
 
 
     return (
-        <div className="flex flex-col p-3 rounded-md shadow-lg hover:shadow-2xl w-11/12 hover:w-[92%] gap-5 ">
-            <div className='flex justify-center w-full'>
+        <div className="flex flex-col p-3 rounded-md bg-neutral-100 shadow-sm hover:shadow-lg w-full">
+            <div className='flex justify-center w-full bg-white rounded-md p-2'>
                 <img className="w-fit h-36" src={image} alt="product" />
             </div>
 
@@ -21,7 +20,7 @@ export default function Card({ data }) {
                 </div>
             </div>
 
-            <div className='flex justify-between items-center'>
+            <div className='flex justify-between items-center pt-2'>
                 <p className='font-bold text-base text-stone-700'>${price}</p>
                 {/* <FaShoppingCart className=' text-neutral-400 hover:text-amber-500 cursor-pointer' /> */}
             </div>
