@@ -52,10 +52,10 @@ export default function ProductDetails({ params }) {
     if (!isLoading && error) content = <p className="text-center text-red-600 text-base font-bold">Can't fetch data, something went wrong!</p>
     if (!isLoading && !error && data) content =
         <>
-            <div className="w-3/4 md:w-2/5 lg:w-2/5 p-10 border border-neutral-100 rounded-md shadow-md">
-                <img className=" h-auto w-auto" src={image} alt="product_image" />
+            <div className="w-3/4 md:w-2/5 lg:w-2/5 max-h-fit p-5 md:p-10 border border-neutral-200 rounded-md shadow-md">
+                <img className="h-auto w-auto" src={image} alt="product_image" />
             </div>
-            <div className="w-3/4 md:w-2/5 lg:w-1/4" >
+            <div className="w-3/4 md:w-2/5 lg:w-2/5 p-5 md:p-10">
                 <p className="text-sm text-neutral-500 font-bold">{category}</p>
                 <h4 className="text-xl text-neutral-800 font-semibold">{title}</h4>
                 <p className="py-2 text-sm text-neutral-800 leading-tight">{description}</p>
